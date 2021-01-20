@@ -6,5 +6,10 @@ pipeline {
                 echo 'Hello PAPA'
             }
         }
+        stage('CheckTerraform') {
+            steps {
+                terraform -v
+            }
+        }
     }
 }
